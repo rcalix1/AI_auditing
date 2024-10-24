@@ -15,4 +15,8 @@
 ## ISACA
 
 * https://ec.europa.eu/futurium/en/system/files/ged/auditing-artificial-intelligence.pdf
+
+## Other
+
+* https://www.thomsonreuters.com/en-us/posts/technology/auditing-ai-transparency/
 * 

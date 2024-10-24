@@ -23,3 +23,8 @@
 ## Stanford
 
 * https://hai.stanford.edu/policy/ai-audit-challenge
+
+## KPMG
+
+* https://kpmg.com/xx/en/our-insights/ai-and-technology/ai-in-financial-reporting-and-audit.html
+* 

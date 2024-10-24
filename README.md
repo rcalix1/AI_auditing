@@ -19,4 +19,7 @@
 ## Other
 
 * https://www.thomsonreuters.com/en-us/posts/technology/auditing-ai-transparency/
-* 
+
+## Stanford
+
+* https://hai.stanford.edu/policy/ai-audit-challenge

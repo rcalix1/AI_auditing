@@ -1,4 +1,4 @@
-# AI_auditing
+# AI Auditing
 
 * AI auditing, risk, and compliance
 

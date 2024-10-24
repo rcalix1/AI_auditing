@@ -34,4 +34,5 @@
 * https://www.edpb.europa.eu/system/files/2024-06/ai-auditing_checklist-for-ai-auditing-scores_edpb-spe-programme_en.pdf
 * https://oecd.ai/en/catalogue/metrics?page=1
 * https://pypi.org/project/audit-AI/
+* https://github.com/pymetrics/audit-ai
 * 

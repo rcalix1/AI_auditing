@@ -27,4 +27,8 @@
 ## KPMG
 
 * https://kpmg.com/xx/en/our-insights/ai-and-technology/ai-in-financial-reporting-and-audit.html
+
+## AI audit metrics
+
+* https://www.edpb.europa.eu/system/files/2024-06/ai-auditing_checklist-for-ai-auditing-scores_edpb-spe-programme_en.pdf
 * 

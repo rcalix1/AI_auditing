@@ -31,6 +31,7 @@
 
 ## AI audit metrics
 
+* SHapley
 * https://www.edpb.europa.eu/system/files/2024-06/ai-auditing_checklist-for-ai-auditing-scores_edpb-spe-programme_en.pdf
 * https://oecd.ai/en/catalogue/metrics?page=1
 * https://pypi.org/project/audit-AI/
@@ -38,3 +39,8 @@
 * https://github.com/dssg/aequitas
 * https://www.google.com/search?q=Python+ai+auditing+kl+divergence&client=firefox-b-1-d&sca_esv=e78c9a996bbe5715&biw=1920&bih=947&ei=K7AaZ-SSNpLcptQPpfSt6Ac&ved=0ahUKEwik1KbV76eJAxUSrokEHSV6C30Q4dUDCBE&uact=5&oq=Python+ai+auditing+kl+divergence&gs_lp=Egxnd3Mtd2l6LXNlcnAiIFB5dGhvbiBhaSBhdWRpdGluZyBrbCBkaXZlcmdlbmNlMgUQIRigATIFECEYoAEyBRAhGKABMgUQIRigAUjWMFCrGViMLHACeACQAQCYAY0BoAHJCqoBAzkuNbgBA8gBAPgBAZgCD6ACyQrCAgoQABiwAxjWBBhHwgIFECEYqwKYAwCIBgGQBgiSBwQxMC41oAfLMw&sclient=gws-wiz-serp
 * https://www.google.com/search?q=Python+ai+auditing+shapley&client=firefox-b-1-d&sca_esv=e78c9a996bbe5715&biw=1920&bih=947&ei=8bAaZ5S9NqyoptQPwMiwyAc&ved=0ahUKEwjU-duz8KeJAxUslIkEHUAkDHkQ4dUDCBE&uact=5&oq=Python+ai+auditing+shapley&gs_lp=Egxnd3Mtd2l6LXNlcnAiGlB5dGhvbiBhaSBhdWRpdGluZyBzaGFwbGV5MgUQIRigATIFECEYoAEyBRAhGKABMgUQIRigATIFECEYoAFIsBNQ0gVYsRFwAXgBkAEAmAGOAaAB7gWqAQM0LjO4AQPIAQD4AQGYAgigAogGwgIKEAAYsAMY1gQYR8ICBRAhGKsCwgIHECEYoAEYCpgDAIgGAZAGCJIHAzUuM6AH8Rg&sclient=gws-wiz-serp
+
+## Law Firms 
+
+* https://www.luminos.law
+* 

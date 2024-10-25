@@ -11,6 +11,7 @@
 
 * https://assets.iqt.org/pdfs/IQTLabs_RoBERTaAudit_Dec2022_final.pdf/web/viewer.html
 * https://www.iqt.org/library/iqt-labs-releases-audit-report-of-roberta-an-large-language-model
+* https://ieeexplore.ieee.org/document/10020403
 
 ## ISACA
 

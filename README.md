@@ -4,6 +4,10 @@
 *  AIML: Explainable AI and Ethical Considerations - such as SHAP
 * AI auditing, risk, and compliance
 
+## ARTIFICIAL INTELLIGENCE ETHICS FRAMEWORK FOR THE INTELLIGENCE COMMUNITY
+
+* https://www.intelligence.gov/artificial-intelligence-ethics-framework-for-the-intelligence-community
+
 ## Audits
 
 * RobertaXLM audit

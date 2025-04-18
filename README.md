@@ -46,4 +46,9 @@
 ## Law Firms 
 
 * https://www.luminos.law
-* 
+
+## RLHF
+
+* https://github.com/rcalix1/TransferLearning/blob/main/RLHF/ITS530-DavidHigley-gpt2-phish-spam.ipynb
+
+

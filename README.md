@@ -53,6 +53,8 @@
 
 ## RLHF
 
+* How to reduce Bias
+* Bias BERT scorer
 * https://github.com/rcalix1/TransferLearning/blob/main/RLHF/ITS530-DavidHigley-gpt2-phish-spam.ipynb
 
 

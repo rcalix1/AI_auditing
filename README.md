@@ -1,6 +1,7 @@
 # AI Auditing, Eplainable AI, and Ethics
 
 * AIML
+*  AIML: Explainable AI and Ethical Considerations - such as SHAP
 * AI auditing, risk, and compliance
 
 ## Audits

@@ -296,6 +296,37 @@ These can be applied independently or as part of a larger audit framework to sup
 
 * https://www.intelligence.gov/artificial-intelligence-ethics-framework-for-the-intelligence-community
 
+# AI Ethics Framework (U.S. Intelligence Community)
+
+A concise summary of key principles from the U.S. Intelligence Community's official Artificial Intelligence Ethics Framework.
+
+---
+
+## ⚖️ 1. Legal Compliance and Integrity
+
+AI must uphold privacy, civil rights, and all relevant laws, with systems designed to act responsibly and ethically.
+
+## 🔍 2. Transparency and Accountability
+
+Explainability is expected, even in secure environments. Clear responsibility must exist throughout the AI lifecycle.
+
+## ⚖️ 3. Objectivity and Fairness
+
+AI should be designed to detect and reduce bias, ensuring objective, balanced outcomes in intelligence applications.
+
+## 🧠 4. Human Oversight
+
+AI must augment—not replace—human judgment, especially in high-stakes or rights-sensitive decisions.
+
+## 🔐 5. Security and Scientific Rigor
+
+AI tools must be secure, resilient, and based on rigorous, cross-disciplinary methods to ensure reliability and safety.
+
+---
+
+These principles guide ethical AI use across design, deployment, and governance—balancing national security with rights and accountability.
+
+
 ## Audits
 
 * RobertaXLM audit

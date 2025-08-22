@@ -169,17 +169,17 @@ import pandas as pd
 
 # Mock predictions
 data = pd.DataFrame({
-    'gender': ['male', 'female', 'male', 'female', 'female', 'male'],
+    'gender': ['en', 'fr', 'en', 'fr', 'fr', 'en'],
     'approved': [1, 0, 1, 0, 1, 1]
 })
 
 # Group rates
-rate_male = data[data.gender == 'male']['approved'].mean()
-rate_female = data[data.gender == 'female']['approved'].mean()
+rate_male = data[data.gender == 'en']['approved'].mean()
+rate_female = data[data.gender == 'fr']['approved'].mean()
 
-# Disparity ratio (female vs male)
-ratio = rate_female / rate_male
-print(f"Approval rate (female/male): {ratio:.2f}")
+# Disparity ratio (fr vs en)
+ratio = rate_fr / rate_en
+print(f"Approval rate (fr/en): {ratio:.2f}")
 ```
 
 ---

@@ -81,6 +81,120 @@ Demos can help clarify how auditing tools work in practice. SHAP can visualize f
 
 AI auditing is a growing field blending ethics, law, data science, and business strategy. Organizations that embrace auditing will improve trust, reduce risk, and gain competitive advantage. The future of responsible AI depends on transparency, accountability, and thoughtful governance.
 
+---
+
+## 13. 🔧 ML/AI Auditing Demos with Python
+
+This section introduces three practical auditing tools you can use to evaluate the transparency, fairness, and ethics of AI systems. Each tool is demonstrated with code and includes clear business-use relevance.
+
+---
+
+## ✅ 1. SHAP: Feature Attribution for Explainability
+
+**What it does:** Quantifies how much each input feature contributes to a model's prediction.
+
+**Use case:** Helps explain predictions in finance, healthcare, or HR settings (e.g., why a customer was denied a loan).
+
+**Key Benefits:**
+- Breaks down predictions into understandable components
+- Makes black-box models more transparent
+- Visual and business-friendly
+
+```python
+import shap
+import xgboost
+from sklearn.datasets import load_boston
+import matplotlib.pyplot as plt
+
+# Load sample data and train model
+data = load_boston()
+X, y = data.data, data.target
+model = xgboost.XGBRegressor().fit(X, y)
+
+# SHAP explainer
+explainer = shap.Explainer(model, X)
+shap_values = explainer(X)
+
+# Plot summary
+shap.summary_plot(shap_values, X, feature_names=data.feature_names)
+```
+
+---
+
+## 🔎 2. BERT Toxicity Scorer (Language Fairness)
+
+**What it does:** Uses a pretrained BERT model to assess whether a sentence is toxic, hateful, or abusive.
+
+**Use case:** Applied in content moderation, internal policy audits, or social media sentiment analysis.
+
+**Key Benefits:**
+- Fast, off-the-shelf scoring for harmful content
+- Demonstrates NLP auditing at the content level
+- Scalable for business applications
+
+```python
+from transformers import pipeline
+
+# Load toxicity classifier
+toxicity = pipeline("text-classification", model="unitary/toxic-bert")
+
+# Example sentences
+sentences = [
+    "I hate you.",
+    "Have a great day!",
+    "That was a stupid decision."
+]
+
+# Score for toxicity
+for text in sentences:
+    result = toxicity(text)[0]
+    print(f"{text} => {result['label']} ({result['score']:.2f})")
+```
+
+---
+
+## ⚖️ 3. Group Fairness: Disparity Ratio
+
+**What it does:** Compares outcomes (e.g., approvals) between demographic groups to measure disparity.
+
+**Use case:** Audit hiring, lending, or recommender systems to ensure equal treatment across gender, race, or other protected attributes.
+
+**Key Benefits:**
+- Simple and interpretable
+- Highlights potential discrimination
+- Can be integrated into compliance reports
+
+```python
+import pandas as pd
+
+# Mock predictions
+data = pd.DataFrame({
+    'gender': ['male', 'female', 'male', 'female', 'female', 'male'],
+    'approved': [1, 0, 1, 0, 1, 1]
+})
+
+# Group rates
+rate_male = data[data.gender == 'male']['approved'].mean()
+rate_female = data[data.gender == 'female']['approved'].mean()
+
+# Disparity ratio (female vs male)
+ratio = rate_female / rate_male
+print(f"Approval rate (female/male): {ratio:.2f}")
+```
+
+---
+
+## 📄 Summary
+
+These tools form a practical foundation for AI auditing in business contexts:
+- **SHAP**: Interprets model behavior feature-by-feature
+- **Toxicity Scorer**: Flags harmful or biased content
+- **Fairness Ratio**: Quantifies demographic disparities
+
+These can be applied independently or as part of a larger audit framework to support transparency, accountability, and regulatory compliance.
+
+---
+
 
 ## ARTIFICIAL INTELLIGENCE ETHICS FRAMEWORK FOR THE INTELLIGENCE COMMUNITY
 

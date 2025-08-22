@@ -157,7 +157,7 @@ for text in sentences:
 
 **What it does:** Compares outcomes (e.g., approvals) between demographic groups to measure disparity.
 
-**Use case:** Audit hiring, lending, or recommender systems to ensure equal treatment across gender, race, or other protected attributes.
+**Use case:** Audit hiring, lending, or recommender systems to ensure equal treatment across  protected attributes.
 
 **Key Benefits:**
 - Simple and interpretable

@@ -6,7 +6,7 @@
 
 # 🧠 AI Auditing, Explainability, and Ethics
 
-**90-Minute Masterclass for Business Students**
+**90-Minute Masterclass**
 This session introduces the foundations of AI auditing, from ethical frameworks and explainability tools to real-world audit case studies and constraint-based input testing using Neural Input Optimization (NIO).
 
 ---

@@ -43,7 +43,7 @@ As AI regulation matures, law firms and corporate risk managers are beginning to
 
 ## 6. Case Study: RoBERTaXLM Audit
 
-This case study involved a formal audit of a large language model to uncover latent bias in its token predictions and representations. Auditors applied statistical and visualization techniques to reveal racial, gender, and cultural biases. This demonstrates the value of independent model audits in high-risk NLP systems.
+This case study involved a formal audit of a large language model to uncover latent bias in its token predictions and representations. Auditors applied statistical and visualization techniques to reveal NER biases. This demonstrates the value of independent model audits in high-risk NLP systems.
 
 ---
 

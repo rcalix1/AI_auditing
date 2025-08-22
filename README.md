@@ -246,6 +246,28 @@ print("Optimized input that triggers output ≈", y_target.item(), ":\n", x_opt.
 
 ---
 
+# NIO for Auditing AI Models
+
+Neural Input Optimization (NIO) can be used not only to audit security policies (like password constraints) but also to audit the AI models themselves. This framing treats the model as a frozen function and searches for inputs that cause specific outputs or internal activations, subject to constraints. Below are two compelling use cases.
+
+
+## A. Triggering Target Output Text in LLMs
+
+Use NIO to discover inputs (e.g., embeddings or prompts) that make a frozen LLM produce specific output completions — such as toxic language, jailbreak instructions, or sensitive policy violations. This is a form of automated red-teaming where the optimized input is crafted not by manual prompting but by gradient descent. It allows auditors to systematically search for edge-case completions that may not be covered in traditional evaluations.
+
+
+
+## B. Representation Leakage Auditing
+
+Use NIO to recover or approximate the original input that produced a known internal embedding or hidden state. This method tests how much information about the input is retained and potentially leaked through the model's representations. It's useful for auditing risks related to memorization, privacy violations, or information leakage in embedding APIs and transformer models.
+
+
+
+These use cases reframe input optimization as a structured, constraint-aware audit tool rather than an adversarial attack, opening up new applications in AI governance, safety, and risk assessment.
+
+
+---
+
 ## 🔍 Why This Matters
 - This is the core idea behind **NIO auditing**: instead of analyzing fixed data, you *probe* the model to reveal hidden vulnerabilities.
 - You can adapt this to audit **security policies**, **recommender systems**, **identity scoring**, or **password strength metrics**.

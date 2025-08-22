@@ -362,6 +362,26 @@ This audit demonstrates that meaningful AI accountability requires testing real 
 
 * https://ec.europa.eu/futurium/en/system/files/ged/auditing-artificial-intelligence.pdf
 
+
+A summary of key points from the ISACA white paper "Auditing Artificial Intelligence" (2018).
+
+---
+
+### 🧾 Key Takeaways
+
+* **Treat AI like other audit targets:** Auditing AI can follow principles similar to IT or cloud audits, focusing on governance, risk, and compliance rather than model internals.
+
+* **Use COBIT® 2019:** The COBIT 2019 framework is recommended to structure AI audit processes, including setting controls, defining goals, and aligning with enterprise governance.
+
+* **Define AI precisely:** Auditors must tailor the definition of AI to the specific context and use case to ensure proper scope and avoid hype-driven assessments.
+
+* **Plan for audit challenges:** AI audits face obstacles like model opacity, shifting ethics norms, and evolving tech pipelines—but these can be mitigated with clear objectives, risk-based methods, and multidisciplinary teams.
+
+---
+
+This guidance bridges traditional audit methods with the emerging realities of AI, emphasizing structure, adaptability, and strategic governance.
+
+
 ## Other
 
 * https://www.thomsonreuters.com/en-us/posts/technology/auditing-ai-transparency/

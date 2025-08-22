@@ -119,48 +119,87 @@ shap_values = explainer(X)
 shap.summary_plot(shap_values, X, feature_names=data.feature_names)
 ```
 
+# SHAP Values in Plain Python
 
-# SHAP Values Explained (Pure Python Demo)
+This README demonstrates how SHAP (SHapley Additive exPlanations) values can be computed **without any libraries**, using only core Python. It includes a simple model and a clear explanation of how each feature contributes to a prediction.
 
-"""
-This example demonstrates the core idea of SHAP (SHapley Additive exPlanations) using only native Python.
-We use a simple 2-feature linear model and compute the SHAP values by averaging the marginal contributions
-of each feature across all possible input orders.
-"""
+---
 
-# Define a simple 2-feature linear model
+## 🔍 What Are SHAP Values?
+SHAP values are based on game theory. They explain how much each feature in a model contributes to a specific prediction.
+
+- Think of each feature as a **player in a game**.
+- The model’s prediction is the **payout**.
+- SHAP tells you: *"How much did each feature contribute to the final prediction?"*
+
+---
+
+## 📊 Model: Simple Linear Function
+We use a dummy linear model:
+```python
+f(x1, x2) = 3 * x1 + 5 * x2
+```
+This model takes two features `x1` and `x2` and returns a prediction.
+
+---
+
+## 🔢 Code Example (Pure Python)
+```python
 def model(x1, x2):
     return 3 * x1 + 5 * x2
 
-# Inputs we want to explain
+# Data point we want to explain
 x1 = 1
-x2 = 2
+x2 = 1
 
-# Baseline prediction with both features missing (set to 0)
-base = model(0, 0)  # = 0
+# Baseline (no features known)
+base = model(0, 0)
 
-# === Order 1: Add x1 first, then x2 ===
-x1_contrib_1 = model(x1, 0) - base              # (3*1 + 5*0) - 0 = 3
-x2_contrib_1 = model(x1, x2) - model(x1, 0)     # (3*1 + 5*2) - 3 = 7
+# SHAP values using feature permutations
+# Order 1: x1 first, then x2
+step1 = model(x1, 0) - base         # Contribution of x1
+step2 = model(x1, x2) - model(x1, 0)  # Contribution of x2
 
-# === Order 2: Add x2 first, then x1 ===
-x2_contrib_2 = model(0, x2) - base              # (3*0 + 5*2) - 0 = 10
-x1_contrib_2 = model(x1, x2) - model(0, x2)     # (3*1 + 5*2) - 10 = 0
+# Order 2: x2 first, then x1
+step3 = model(0, x2) - base         # Contribution of x2
+step4 = model(x1, x2) - model(0, x2)  # Contribution of x1
 
-# === Average marginal contributions ===
-shap_x1 = (x1_contrib_1 + x1_contrib_2) / 2     # (3 + 0) / 2 = 1.5
-shap_x2 = (x2_contrib_1 + x2_contrib_2) / 2     # (7 + 10) / 2 = 8.5
+# Average contributions
+phi_x1 = (step1 + step4) / 2
+phi_x2 = (step2 + step3) / 2
 
-# Print results with explanation
-print("SHAP value for x1:", shap_x1, "\u27b5 because x1 contributes 3 or 0 depending on order")
-print("SHAP value for x2:", shap_x2, "\u27b5 because x2 contributes 7 or 10 depending on order")
+print(f"SHAP x1: {phi_x1} (because x1 = {x1})")
+print(f"SHAP x2: {phi_x2} (because x2 = {x2})")
+print(f"Model Prediction: {model(x1, x2)}")
+print(f"Base Value: {base}")
+print(f"Sum of SHAP + Base: {base + phi_x1 + phi_x2}")
+```
 
-# Sanity check: SHAP values should sum to the model output
-prediction = model(x1, x2)                      # 3*1 + 5*2 = 13
-shap_total = shap_x1 + shap_x2
-print("Model prediction:", prediction)
-print("Sum of SHAP values:", shap_total, "\u27b5 matches the prediction \u2714")
+---
 
+### 🧠 Explanation
+- We calculate how much the prediction changes when a feature is added.
+- We test different orders (x1 before x2, x2 before x1) and **average the results**.
+
+#### Output Example:
+```
+SHAP x1: 3.0 (because x1 = 1)
+SHAP x2: 5.0 (because x2 = 1)
+Model Prediction: 8
+Base Value: 0
+Sum of SHAP + Base: 8.0
+```
+
+Each SHAP value **adds up** to the final model output. Simple, fair, and interpretable!
+
+---
+
+### ✅ Summary
+- SHAP gives each feature credit for its contribution.
+- We average over permutations to keep it fair.
+- This demo uses **just math**, no libraries.
+
+You can now reuse this structure to explain **any linear model** or small nonlinear models using brute force.
 
 
 

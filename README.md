@@ -161,7 +161,7 @@ for text in sentences:
 
 **Key Benefits:**
 - Simple and interpretable
-- Highlights potential discrimination
+- Highlights potential bias
 - Can be integrated into compliance reports
 
 ```python

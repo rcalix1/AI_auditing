@@ -296,7 +296,6 @@ These can be applied independently or as part of a larger audit framework to sup
 
 * https://www.intelligence.gov/artificial-intelligence-ethics-framework-for-the-intelligence-community
 
-# AI Ethics Framework (U.S. Intelligence Community)
 
 A concise summary of key principles from the U.S. Intelligence Community's official Artificial Intelligence Ethics Framework.
 
@@ -333,6 +332,27 @@ These principles guide ethical AI use across design, deployment, and governance�
 * SkyScan audit
 
 ## RobertaXLM Audit
+
+
+
+A brief summary of key findings from the IQT Labs audit of the RoBERTa language model (Dec 2022).
+
+---
+
+## 🔍 Key Findings
+
+* **NER bias by language context:** When replacing character names in texts with those from underrepresented languages (e.g., Saisiyat), the model's NER performance dropped, revealing cultural representation gaps.
+
+* **Auditing the whole stack:** Vulnerabilities were found not just in the model, but in its surrounding infrastructure — including insecure Jupyter environments.
+
+* **Bias detection must be grounded:** Instead of flagging all score differences as bias, the audit used meaningful thresholds like the legal Four-Fifths Rule to identify material disparities.
+
+* **Contextual auditing over generic metrics:** The audit focused on Named Entity Recognition as a realistic use case, emphasizing that audits must be grounded in practical application contexts.
+
+---
+
+This audit demonstrates that meaningful AI accountability requires testing real tasks, checking infrastructure, and applying interpretive standards — not just statistical comparisons.
+
 
 * https://assets.iqt.org/pdfs/IQTLabs_RoBERTaAudit_Dec2022_final.pdf/web/viewer.html
 * https://www.iqt.org/library/iqt-labs-releases-audit-report-of-roberta-an-large-language-model

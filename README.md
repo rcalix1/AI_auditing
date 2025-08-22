@@ -251,7 +251,7 @@ print("Optimized input that triggers output ≈", y_target.item(), ":\n", x_opt.
 - You can adapt this to audit **security policies**, **recommender systems**, **identity scoring**, or **password strength metrics**.
 - Constraints can be hard (clamps) or soft (penalties), allowing you to simulate realistic boundaries.
 
-Let me know if you want a batched or more complex version (e.g., with masks, entropy targets, or backdoor detection).
+
 
 
 
@@ -263,6 +263,7 @@ These tools form a practical foundation for AI auditing in business contexts:
 - **SHAP**: Interprets model behavior feature-by-feature
 - **Toxicity Scorer**: Flags harmful or biased content
 - **Fairness Ratio**: Quantifies demographic disparities
+- **NIO**: Neural Input Optimization
 
 These can be applied independently or as part of a larger audit framework to support transparency, accountability, and regulatory compliance.
 

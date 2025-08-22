@@ -174,8 +174,8 @@ data = pd.DataFrame({
 })
 
 # Group rates
-rate_male = data[data.gender == 'en']['approved'].mean()
-rate_female = data[data.gender == 'fr']['approved'].mean()
+rate_en = data[data.gender == 'en']['approved'].mean()
+rate_fr = data[data.gender == 'fr']['approved'].mean()
 
 # Disparity ratio (fr vs en)
 ratio = rate_fr / rate_en

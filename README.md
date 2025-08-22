@@ -119,6 +119,52 @@ shap_values = explainer(X)
 shap.summary_plot(shap_values, X, feature_names=data.feature_names)
 ```
 
+
+# SHAP Values Explained (Pure Python Demo)
+
+"""
+This example demonstrates the core idea of SHAP (SHapley Additive exPlanations) using only native Python.
+We use a simple 2-feature linear model and compute the SHAP values by averaging the marginal contributions
+of each feature across all possible input orders.
+"""
+
+# Define a simple 2-feature linear model
+def model(x1, x2):
+    return 3 * x1 + 5 * x2
+
+# Inputs we want to explain
+x1 = 1
+x2 = 2
+
+# Baseline prediction with both features missing (set to 0)
+base = model(0, 0)  # = 0
+
+# === Order 1: Add x1 first, then x2 ===
+x1_contrib_1 = model(x1, 0) - base              # (3*1 + 5*0) - 0 = 3
+x2_contrib_1 = model(x1, x2) - model(x1, 0)     # (3*1 + 5*2) - 3 = 7
+
+# === Order 2: Add x2 first, then x1 ===
+x2_contrib_2 = model(0, x2) - base              # (3*0 + 5*2) - 0 = 10
+x1_contrib_2 = model(x1, x2) - model(0, x2)     # (3*1 + 5*2) - 10 = 0
+
+# === Average marginal contributions ===
+shap_x1 = (x1_contrib_1 + x1_contrib_2) / 2     # (3 + 0) / 2 = 1.5
+shap_x2 = (x2_contrib_1 + x2_contrib_2) / 2     # (7 + 10) / 2 = 8.5
+
+# Print results with explanation
+print("SHAP value for x1:", shap_x1, "\u27b5 because x1 contributes 3 or 0 depending on order")
+print("SHAP value for x2:", shap_x2, "\u27b5 because x2 contributes 7 or 10 depending on order")
+
+# Sanity check: SHAP values should sum to the model output
+prediction = model(x1, x2)                      # 3*1 + 5*2 = 13
+shap_total = shap_x1 + shap_x2
+print("Model prediction:", prediction)
+print("Sum of SHAP values:", shap_total, "\u27b5 matches the prediction \u2714")
+
+
+
+
+
 ---
 
 ## 🔎 2. BERT Toxicity Scorer (Language Fairness)
